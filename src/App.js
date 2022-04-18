@@ -52,7 +52,7 @@ function App() {
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>changing text</h1>
+        <h1>changing text again</h1>
         <p>
           isServiceWorkerInitialized:{" "}
           {JSON.stringify(isServiceWorkerInitialized)}
