@@ -53,7 +53,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>
-          Text updated
+          Text updated again
         </h1>
         <p>
           isServiceWorkerInitialized:{" "}
