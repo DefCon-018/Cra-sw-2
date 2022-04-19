@@ -21,11 +21,7 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.register({
-  onUpdate: (registration) => {
-    alert("New version available!  Ready to update?");
-    if (registration && registration.waiting) {
-      registration.waiting.postMessage({ type: "SKIP_WAITING" });
-    }
-    window.location.reload();
-  },
+  onSuccess: () => store.dispatch({ type: SW_INIT }),
+  onUpdate: (registration) =>
+    store.dispatch({ type: SW_UPDATE, payload: registration }),
 });
